@@ -1,3 +1,4 @@
 # multikeyNTRU
-Implementation of multikey NTRU Encryption scheme \n
+Implementation of multikey NTRU Encryption scheme
+
 this code currently in work
