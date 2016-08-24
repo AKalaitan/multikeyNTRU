@@ -1,5 +1,5 @@
-# math and scipy are used for discrete gaussian distribution 
-from scipy.special import kn
+# math and scipy are used for discrete gaussian distribution
+#from scipy.special import kn
 import random
 import math
 
@@ -277,8 +277,9 @@ def randomKeyPoly(maxDegree,B_bound):
 	output.append(0)
 	for i in range (1,maxDegree):
 		random.seed()
-		output.append(((int((10**16)*random.random())) % 3)-1)
-		#if random.choice('01')=='0' : output[i]=-output[i]
+		output.append(((int((10**16)*random.random())) % B_bound))
+		if random.choice('01')=='0' : output[i]=-output[i]
+	output = remove_lead_zero(output)
 	return output
 
 def take_f_from_cyclo_distribution(n,q):
@@ -290,3 +291,6 @@ def take_f_from_cyclo_distribution(n,q):
 
 def take_f_from_gaussian_distribution(n,B_bound,q):
 	return poly_add([1],poly_mult([2],gaussian(n,B_bound),q),q)
+
+def take_f_from_seed_gen_distribution(n,B_bound,q):
+	return poly_add([1],poly_mult([2],randomKeyPoly(n,B_bound),q),q)
