@@ -156,5 +156,5 @@ k = 5  # n = 2**k, so n is the power of 2.
 B = 6  # B-bound for the distribution
 N = 7  # The number of parties
 m = [[1],[0],[1],[1],[0],[1],[1]] # The messages of each party
-test(k,B,N,m)					  # Run encryption under the stated above settings
+test(k,B,N,m)			  # Run encryption
 
