@@ -152,8 +152,8 @@ def test(k,B,N,m):
 #############################################
 #Main function# Put any values you want below
 #############################################
-k = 5  # n = 2**k, so n is the power of 2. 
-B = 6  # B-bound for the distribution
+k = 5  # n = 2**k, so n is the power of 2; n - is the maximum degree of the polynomials over the ring Rq
+B = 6  # B-bound for the distribution; all the coefficients are less than B-bound
 N = 7  # The number of parties
 m = [[1],[0],[1],[1],[0],[1],[1]] # The messages of each party
 test(k,B,N,m)			  # Run encryption
